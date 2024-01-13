@@ -1,19 +1,47 @@
 html {
-  font-size: max(5ch, 5vmax);
-  font-family: sans-serif;
+  font-family: ui-rounded;
+  font-size: max(5ch, 2vmax + 3vmin);
   line-height: 1.618;
 }
 
-p { max-width: 20em; margin: auto; }
-ul { margin-block: 1ch }
-li { list-style: circle }
-li:focus-within { list-style-type: disc }
+p { max-width: 10em; margin: 1em 0 }
 u { text-decoration: solid line-through }
+ul { padding: 0 }
+li:focus-within { list-style-type: square }
 * { box-sizing: border-box }
+
+a {
+  display: inline-block;
+  line-height: 2;
+}
 
 [class] {
   transition: filter 600ms;
 }
+
+[href] {
+  text-decoration-line: overline;
+  touch-action: manipulation;
+}
+
+[href^="#"] {
+  text-decoration-style: wavy;
+}
+
+[href$=".css"] {
+  text-decoration-style: dotted;
+}
+
+:focus {
+  box-shadow: 0 0 1ex 1em;
+  outline: 1em dotted;
+  text-decoration-style: solid;
+}
+
+a:hover {
+  text-decoration-style: double;
+}
+
 
 body {
   margin: 0;
@@ -32,39 +60,41 @@ main > * {
   min-height: 100vh;
   padding: 1rem;
   padding-inline: max(1rem, 10vw);
-  width: 100%;
-}
-
-a {
-  display: inline-block;
-  line-height: 2;
 }
 
 footer a {
   padding-inline: 1ch;
 }
 
-[href] {
-  text-decoration-line: overline;
-  touch-action: manipulation;
+:target {
+  border-block-start: 1ch dotted var(--iffy);
+  border-inline-end: 1ch double var(--yffi);
 }
 
-[href^="#"] {
-  text-decoration-style: wavy;
+footer:target {
+  box-shadow: 0 0 2vh 20vmax var(--iffy);
 }
 
-[href$=".css"] {
-  text-decoration-style: dotted;
+h1 {
+  align-items: flex-start;
+  display: flex;
+  font-weight: 600;
+  margin-top: 10vh;  
+  min-height: 100vh;
 }
 
-:focus {
-  box-shadow: 0 0 1ch 1em;
-  outline: thick groove;
-  text-decoration-style: solid;
-}
+h2 { font-weight: 500 }
+h3 { margin: 0 }
 
-a:hover {
-  text-decoration-style: double;
+@media (orientation: portrait) {
+  article {
+    min-width: 100%;
+  }
+
+  h1, h2, h3 {
+    margin-inline: 2rem;
+    writing-mode: vertical-lr;
+  }
 }
 
 dl {
@@ -84,32 +114,15 @@ dd {
   float: inline-end;
 }
 
-samp {
-  font-size: 1.618em;
-}
-
-h1 {
-  font-weight: 600;
-  margin-top: 10vh;  
-  min-height: 100vh;
-}
-
-h3 {
-  font-weight: 500;
-}
-
-h4 {
-  margin: 0;
-}
-
 cite {
   font-style: unset;
   font-weight: 600;
 }
 
-@media (orientation: portrait) {
-  h1, h2, h3 {
-    margin-inline: 2rem;
-    writing-mode: vertical-lr;
-  }
+mark {
+  font: 900 1.618em cursive;
+}
+
+samp {
+  font-size: 1.618em;
 }
