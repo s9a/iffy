@@ -1,12 +1,6 @@
-# [`s11y`](index.html)
+# iffy
 
-```
-sincronicità
-sincronicitat
-sincronicidade
-sincronicidad
-synchronicité
-synchronicité
-synchronicity
-s***********y
-```
+### [CSS](iffy.css) [color typhoon](https://s9a.page/iffy)
+
+* `filter`
+* `var`

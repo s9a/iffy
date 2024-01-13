@@ -1,0 +1,115 @@
+html {
+  font-size: max(5ch, 5vmax);
+  font-family: sans-serif;
+  line-height: 1.618;
+}
+
+p { max-width: 20em; margin: auto; }
+ul { margin-block: 1ch }
+li { list-style: circle }
+li:focus-within { list-style-type: disc }
+u { text-decoration: solid line-through }
+* { box-sizing: border-box }
+
+[class] {
+  transition: filter 600ms;
+}
+
+body {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+main {
+  contain: layout;
+  display: flex;
+  flex-flow: column;
+  margin: 0 auto;
+}
+
+main > * {
+  margin: auto;
+  min-height: 100vh;
+  padding: 1rem;
+  padding-inline: max(1rem, 10vw);
+  width: 100%;
+}
+
+a {
+  display: inline-block;
+  line-height: 2;
+}
+
+footer a {
+  padding-inline: 1ch;
+}
+
+[href] {
+  text-decoration-line: overline;
+  touch-action: manipulation;
+}
+
+[href^="#"] {
+  text-decoration-style: wavy;
+}
+
+[href$=".css"] {
+  text-decoration-style: dotted;
+}
+
+:focus {
+  box-shadow: 0 0 1ch 1em;
+  outline: thick groove;
+  text-decoration-style: solid;
+}
+
+a:hover {
+  text-decoration-style: double;
+}
+
+dl {
+  flex-flow: wrap;
+  display: flow-root;
+  padding: 0;
+}
+
+dt {
+  clear: both;
+  float: left;
+  float: inline-start;
+}
+
+dd {
+  float: right;
+  float: inline-end;
+}
+
+samp {
+  font-size: 1.618em;
+}
+
+h1 {
+  font-weight: 600;
+  margin-top: 10vh;  
+  min-height: 100vh;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  margin: 0;
+}
+
+cite {
+  font-style: unset;
+  font-weight: 600;
+}
+
+@media (orientation: portrait) {
+  h1, h2, h3 {
+    margin-inline: 2rem;
+    writing-mode: vertical-lr;
+  }
+}
